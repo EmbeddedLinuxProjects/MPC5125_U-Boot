@@ -715,6 +715,10 @@ clear_bss:
 	 */
 	.globl	trap_init
 trap_init:
+	mflr	r11
+	bl	_GLOBAL_OFFSET_TABLE_1-4
+	mflr	r12
+	
 	mflr	r4			/* save link register		*/
 	GET_GOT
 	lwz	r7, GOT(_start)

@@ -1,0 +1,9 @@
+U-Boot Build Steps
+...................
+
+1. export ARCH = powerpc
+2. export CROSS_COMPILE=powerpc-linux-gnu-
+3. export KCFLAGS=-fgnu89-inline
+4. make distclean
+5. make mecp5123_defconfig
+6. make all
