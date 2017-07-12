@@ -1,2 +1,15 @@
 # MPC5125_U-Boot
-Source code for U-Boot boot loader for Embedded boards based on PowerPC MPC5125 processor.
+# Developed by Anil Joseph
+
+*** Source code for U-Boot boot loader for Embedded boards based on PowerPC MPC5125 processor ***
+-------------------------------------------------------------------------------------------------
+
+U-Boot (subtitled "the Universal Boot Loader" and often shortened to U-Boot) is an open source, primary boot loader used in embedded devices to package the instructions to boot the device's operating system kernel. It is available for a number of computer architectures, including 68k, ARM, AVR32, Blackfin, MicroBlaze, MIPS, Nios, SuperH, PPC, RISC-V and x86.
+
+U-Boot is both a first-stage and second-stage bootloader. It is loaded by the system's ROM or BIOS from a supported boot device, such as an SD card, SATA drive, NOR flash (e.g. using SPI or I²C), or NAND flash. If there are size constraints, U-Boot may be split into stages: the platform would load a small SPL (Secondary Program Loader), and the SPL would do initial hardware configuration and load the rest of U-Boot.[3][4][5] Regardless of whether the SPL is used, U-Boot performs both first-stage (e.g., configuring memory controllers and SDRAM) and second-stage booting (performing multiple steps to load a modern operating system from a variety of devices that must be configured, presenting a menu for users to interact with and control the boot process, etc.).
+
+U-Boot runs a command-line interface on a serial port. Using the console, users can load and boot a kernel, possibly changing parameters from the default. There are also commands to read device information, read and write flash memory, download files (kernels, boot images, etc.) from the serial port or network, manipulate device trees, and work with environment variables (which can be written to persistent storage, and are used to control U-Boot behavior such as the default boot command and timeout before auto-booting, as well as hardware data such as the Ethernet MAC address).
+
+Unlike PC bootloaders which obscure or automatically choose the memory locations of the kernel and other boot data, U-Boot requires its boot commands to explicitly specify the memory addresses as destinations for copying data (kernel, ramdisk, device tree, etc.) and for jumping to the kernel and as arguments for the kernel. Because U-Boot's commands are fairly low-level, it takes several steps to boot a kernel, but this also makes U-Boot more flexible than other bootloaders, since the same commands can be used for more general tasks. It's even possible to upgrade U-Boot using U-Boot, simply by reading the new bootloader from somewhere (local storage, or from the serial port or network) into memory, and writing that data to persistent storage where the bootloader belongs.
+
+U-Boot has support for USB, so it can use a USB keyboard to operate the console (in addition to input from the serial port), and it can access and boot from USB Mass Storage devices such as SD card readers.
